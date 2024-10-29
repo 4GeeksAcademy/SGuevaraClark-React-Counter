@@ -1,14 +1,11 @@
 import React from "react";
 import App from "./App";
 
-const Home = () => {
+const Home = (props) => {
     return (
         <div>
-
-            <App />
-            <p className="text-center">
-           
-            </p>
+            <App seconds={props.seconds} />
+            
         </div>
     );
 };

@@ -1,13 +1,11 @@
-// index.js (in root folder)
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "../styles/index.css";
-import Home from "./component/Home.jsx";
+import Home from "./component/Home";  
 
-// Create root once
 const root = ReactDOM.createRoot(document.getElementById('app'));
 
-// Update every second
+let counter = 0;
 setInterval(() => {
-    root.render(<Home />);
+    root.render(<Home seconds={counter} />);
+    counter++;
 }, 1000);

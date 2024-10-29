@@ -1,7 +1,7 @@
 import React from "react";
-import "../../styles/SimpleCounter.css";  
+import "../../styles/SimpleCounter.css";
 
-function SimpleCounter({ thousandsDigit, hundredsDigit, tensDigit, onesDigit }) {
+function SimpleCounter(props) {
     return (
         <div className="counter-display">
             <div className="clock-image">
@@ -10,10 +10,10 @@ function SimpleCounter({ thousandsDigit, hundredsDigit, tensDigit, onesDigit }) 
                     <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"/>
                 </svg>
             </div>
-            <div className="seconds-thousands">{thousandsDigit}</div>
-            <div className="seconds-hundreds">{hundredsDigit}</div>
-            <div className="seconds-tens">{tensDigit}</div>
-            <div className="seconds-ones">{onesDigit}</div>
+            <div>{props.thousandsDigit}</div>
+            <div>{props.hundredsDigit}</div>
+            <div>{props.tensDigit}</div>
+            <div>{props.onesDigit}</div>
         </div>
     );
 }
